@@ -137,15 +137,13 @@ animation: bg2_bottom_grey_r 1s 2s forwards;opacity: 0}
 	to{bottom: 7.514%;left: -30%;opacity: 1;}
 }
 /*男人有梦就要去造*/
-#page1 .man{position: absolute;bottom: 12.893%;width:80%;left: 0;right: 0;margin:auto;
-          animation: man 1s 5s forwards;opacity: 0;}
+#page1 .man{position: absolute;bottom: 12.893%;width:80%;left: 0;right: 0;margin:auto;animation: man 1s 5s forwards;opacity: 0;}
 @keyframes man{
 	from{width: 600px;bottom: 0;opacity: 0;}
 	to{width:80%;bottom: 12.893%;opacity: 1;}
 }
 /*粉色星光*/
-#page1 .man_bg{position: absolute;bottom: 0;width: 100%;right: 0;
-                animation: man_bg 1s 5s forwards;opacity: 0;}
+#page1 .man_bg{position: absolute;bottom: 0;width: 100%;right: 0;animation: man_bg 1s 5s forwards;opacity: 0;}
 @keyframes man_bg{
 	from{bottom: 0;right: -300px;opacity: 0;}
 	to{bottom: 0;right: 0;opacity: 1;}
@@ -699,8 +697,8 @@ animation: bg2_bottom_grey_r 1s 2s forwards;opacity: 0}
 /*方向*/
 .direction{position: absolute;bottom: 3.145%;width: 7.466%;left: 0;right: 0;margin: auto;animation: direction 1s infinite alternate;}
 @keyframes direction{
-	from{bottom: 5.145%;}
-	to{bottom: 3.145%;}
+	from{transform:translate3d(0,3px,0);}
+	to{transform:translate3d(0,-12px,0);}
 }
 @-webkit-keyframes direction{
   from{bottom: 5.145%;}
