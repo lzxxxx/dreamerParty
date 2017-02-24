@@ -590,7 +590,7 @@ animation: bg2_bottom_grey_r 1s 2s forwards;opacity: 0}
 #page7 .cyan{width: 8.4%;height: 3.748%;position: absolute;  top: 39.280%; left: 43.867%;}
 #page7 .red2{width: 4.133%;height: 2.623%;position: absolute; bottom: 12.293%; right: 3.2%;}
 #page7 .title{width: 49.733%;height: 3.298%;position: absolute; top: 18.366%;left: 25.333%;animation: title7 1s 1s forwards;opacity: 0;}
-#page7 .message{width: 59.333%;height: 7.571%;position: absolute; top: 29.235;left: 18%;}
+#page7 .message{width: 59.333%;height: 7.571%;position: absolute; top: 29.235%;left: 18%;}
 #page7 .p1{width: 22.667%;height: 18.740%;position: absolute; top: 39.580%;left: 21.333%;opacity: 0;animation: p 1s 1.6s forwards;}
 #page7 .p2{width: 29.333%;height: 14.993%;position: absolute; top: 41.904%;right: 19.2%;opacity: 0;animation: p 1s 1.8s forwards;}
 #page7 .p3{width: 22.667%;height: 14.993%;position: absolute; bottom: 25.187%;left: 13.867%;opacity: 0;animation: p 1s 2s forwards;}
@@ -610,7 +610,7 @@ animation: bg2_bottom_grey_r 1s 2s forwards;opacity: 0}
 }
 @keyframes green7{
   from{right: -30%;}
-  to{right: 7.867%;opacity: 1;}
+  to{right: 30%;opacity: 1;}
 }
 @keyframes title7{
   to{top: 18.366%;opacity: 1;}
@@ -702,11 +702,19 @@ animation: bg2_bottom_grey_r 1s 2s forwards;opacity: 0}
 	from{bottom: 5.145%;}
 	to{bottom: 3.145%;}
 }
+@-webkit-keyframes direction{
+  from{bottom: 5.145%;}
+  to{bottom: 3.145%;}
+}
 /*音乐*/
 .music{position: absolute;bottom: 3.145%;width: 6.871%;right: 10%;animation: music 2s infinite }
 @keyframes music{
 	from{transform: rotateZ(0deg);}
 	to{transform: rotateZ(360deg);}
+}
+@-webkit-keyframes music{
+  from{transform: rotateZ(0deg);}
+  to{transform: rotateZ(360deg);}
 }
 .audio{
   display: none;
