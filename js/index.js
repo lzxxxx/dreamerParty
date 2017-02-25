@@ -1,5 +1,6 @@
 $(function(){
 	var media = document.getElementsByClassName("audio")[0];
+	media.play();
 	$('.music').on('click',function(){
 		if(media.paused){
 			media.play();
