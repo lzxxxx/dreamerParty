@@ -14,32 +14,36 @@ $(document).on('touchstart',function(e){
 	startY = e.changedTouches[0].clientY;
 })
 if(slide_bol){
-$(document).on('touchend',function(e){
-	endY = e.changedTouches[0].clientY;
-	if(slide_bol){
-		if(endY - startY < -50){
-			index = index + 1;
-			if(index > 8){
-				index = 8;
+	$(document).on('touchend',function(e){
+		endY = e.changedTouches[0].clientY;
+		if(slide_bol){
+			if(endY - startY < -50){
+				index = index + 1;
+				if(index > 8){
+					index = 8;
+				}
+			} else if(endY - startY > 50){
+				index = index - 1;
+				if(index < 0){
+					index = 0;
+				}
+			}else {
+				console.log('no change');
 			}
-		} else if(endY - startY > 50){
-			index = index - 1;
-			if(index < 0){
-				index = 0;
-			}
-		}else {
-			console.log('no change');
+			console.log(index);
+			$('.wrap>div:gt('+index+')').fadeOut(1500);
+			$('.wrap>div:lt('+index+')').fadeOut(1500);
+			$('.wrap>div:eq('+index+')').fadeIn(1500);
 		}
-		console.log(index);
-		$('.wrap>div:gt('+index+')').fadeOut(1500);
-		$('.wrap>div:lt('+index+')').fadeOut(1500);
-		$('.wrap>div:eq('+index+')').fadeIn(1500);
-	}
-	slide_bol = false;
-	setTimeout(function(){
-		slide_bol = true;
-		console.log(1);
-	},2500);
-})
+		slide_bol = false;
+		setTimeout(function(){
+			slide_bol = true;
+			console.log(1);
+		},2500);
+	})
 }
+$('.paymask').on('touchstart',function(){
+	console.log('click');
+	$('input').val('');
+})
 
